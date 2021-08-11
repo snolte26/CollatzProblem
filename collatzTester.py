@@ -1,10 +1,10 @@
-def main():
-    initialNum = 295147905179352825856
-    num = initialNum
+def main(number):
+    # initialNum = 295147905179352825856
+    num = number
     steps = 0
     while True:
         if num == 1:
-            print(str(initialNum) + " reached the 4-2-1 loop and took " + str(steps) + " steps")
+            print(str(number) + " reached the 4-2-1 loop and took " + str(steps) + " steps")
             break
         elif num % 2 == 0:
             num //= 2
@@ -16,4 +16,10 @@ def main():
             steps += 1
 
 
-main()
+while True:
+    print("0 to quit")
+    number = int(input("Input number to test: "))
+    if number == 0:
+        break
+    else:
+        main(number)
